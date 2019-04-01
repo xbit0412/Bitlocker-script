@@ -1,0 +1,12 @@
+#VERSION 1
+#   - Corregido que los directorios a veces no se creaban adecuadamente
+#VERSION 2
+#   - Añadido que el explorador de archivos nautilus se abra tras montar el disco virtual y su descifrado
+#VERSION 3
+#   - Añadido mensaje de error si el script no es ejecutado como root (permiso de nivel 0)
+#   - Añadido que cuando se debe introducir la contraseña de bitlocker la entrada es invisible y ya no se ven las contraseñas
+#   - Añadida dedicatoria a una persona
+#   - Añadido que el explorador de archivos por defecto del sistema se abra tras montar el disco virtual
+#   - Añadido logo propio ascii xbit en el titulo
+#VERSION 4
+#    - El script genera los directorios de montaje de manera automatica (unidad1, unidad2)

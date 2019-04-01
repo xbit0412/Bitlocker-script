@@ -1,14 +1,16 @@
 #!/bin/bash
-#  VERSION 1
+#VERSION 1
 #   - Corregido que los directorios a veces no se creaban adecuadamente
-#  Version 2
+#VERSION 2
 #   - Añadido que el explorador de archivos nautilus se abra tras montar el disco virtual y su descifrado
-# VERSION 3
+#VERSION 3
 #   - Añadido mensaje de error si el script no es ejecutado como root (permiso de nivel 0)
 #   - Añadido que cuando se debe introducir la contraseña de bitlocker la entrada es invisible y ya no se ven las contraseñas
 #   - Añadida dedicatoria a una persona
 #   - Añadido que el explorador de archivos por defecto del sistema se abra tras montar el disco virtual
 #   - Añadido logo propio ascii xbit en el titulo
+#VERSION 4
+#    - El script genera los directorios de montaje de manera automatica (unidad1, unidad2)
     if (( EUID != 0 )); then
     echo "Tienes que ejecutar el script como root. Prueba copiando y pegando esto: sudo ./dislocker_mount.sh" 1>&2
     exit 1
@@ -48,15 +50,15 @@ read -p "Pulsa una tecla para continuar"
 #
 # Crear directorios donde sera montado
 clear
-echo "Escribe un nombre de montaje en el directorio /mnt"
-read montaje1
-echo "Has seleccionado $montaje1"
-clear
-echo "Escribe otro nombre de montaje en el directorio /mnt"
-read montaje2
-echo "Has seleccionado $montaje1 y $montaje2, creando directorios..."
-mkdir /mnt/$montaje1 /mnt/$montaje2
+montaje1=unidad1
+montaje2=unidad2
+#function pause(){
+#    read -p "$*"
+#}
+echo "Se creara la $montaje1 y $montaje2 en /mnt"
 echo
+read -p 'Presiona enter para continuar'
+mkdir /mnt/$montaje1 /mnt/$montaje2
 #
 # ¡Empezar a montar todo! Montar bitlocker como particion virtual desbloqueandola con la contraseña
 clear
