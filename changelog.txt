@@ -9,4 +9,9 @@
 #   - Añadido que el explorador de archivos por defecto del sistema se abra tras montar el disco virtual
 #   - Añadido logo propio ascii xbit en el titulo
 #VERSION 4
-#    - El script genera los directorios de montaje de manera automatica (unidad1, unidad2)
+#   - El script genera los directorios de montaje de manera automatica (unidad1, unidad2)
+#VERSION 5
+#   - Comprueba si el programa esta instalado, en caso de que no lo este lo instala
+#   - Asignacion de permisos adecuada
+#   - Añadido spam de automatizador Dislocker
+#   - Mejorados los textos (eliminacion, sustitucion)
