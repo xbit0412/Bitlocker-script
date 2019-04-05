@@ -15,3 +15,7 @@
 #   - Asignacion de permisos adecuada
 #   - Añadido spam de automatizador Dislocker
 #   - Mejorados los textos (eliminacion, sustitucion)
+##################################################################
+#VERSION 6
+#   - Automatizacion de la insercion del usuario actual
+#   - Modificado el mensaje de autor  

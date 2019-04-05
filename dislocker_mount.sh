@@ -16,7 +16,11 @@
 #   - Asignacion de permisos adecuada
 #   - Añadido spam de automatizador Dislocker
 #   - Mejorados los textos (eliminacion, sustitucion)
-##################################################################    
+##################################################################
+#VERSION 6
+#   - Automatizacion de la insercion del usuario actual
+#   - Modificado el mensaje de autor   
+#   - Modificado el color de la terminal al ejecutar el script
     if (( EUID != 0 )); then
     echo "Tienes que ejecutar el script como root. Prueba copiando y pegando esto: sudo ./dislocker_mount.sh" 1>&2
     chmod u=rwx,go=r dislocker_mount.sh 
@@ -24,6 +28,9 @@
     else
     chmod u=rwx,go=r dislocker_mount.sh 
     fi
+printf '\e[38;5;196m Foreground color: red\n'
+printf '\e[48;5;0m Background color: black\n'
+printf '\e[K'
 programa=dislocker
 dpkg -s $programa &> /dev/null
     if [ $? -eq 0 ]; then
@@ -71,14 +78,14 @@ echo "#        /_/\_\|_.__/ |_| \__|       #"
 echo "######################################"
 echo
 echo
-echo "Escribe tu nombre de usuario de sistema"
-read username
+username=`logname`
+echo "Se esta determinando tu nombre de usuario en el sistema..."
 chown $username dislocker_mount.sh 
 
         if [ $username = jans ]; then
-            echo "Gracias por inspirarme :)"
+            echo "Gracias por inspirarme $username :)"
         elif [ $username = xbit ]; then
-            echo    "Hola de nuevo maestro"
+            echo    "I'm here to serve $username"
         fi
 
 echo
