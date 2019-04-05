@@ -19,3 +19,4 @@
 #VERSION 6
 #   - Automatizacion de la insercion del usuario actual
 #   - Modificado el mensaje de autor  
+#   - Modificado el color de la terminal al ejecutar el script
