@@ -18,5 +18,11 @@
 ##################################################################
 #VERSION 6
 #   - Automatizacion de la insercion del usuario actual
-#   - Modificado el mensaje de autor  
+#   - Modificado el mensaje de autor   
 #   - Modificado el color de la terminal al ejecutar el script
+#VERSION 7
+#   - Cambiado el color del texto por uno mas apreciable en ciertos tipos de pantallas
+#   - Añadida la instalacion de dialog como dependencia para el script
+#   - Añadido menu de seleccion de idioma (Español, Euskera, Ingles)
+#   - Por motivos de seguridad, se ha eliminado la cadena que revelaba la contraseña de bitlocker escrita
+#   - Corregidas algunas traducciones
